@@ -1,0 +1,71 @@
+127.0.0.1:6379> sadd mobile_type Samsung Oppo Apple BlackBerry
+(integer) 0
+127.0.0.1:6379> sadd Samsung_versions Samsung_Galaxy_M31s Galaxy_A Galaxy_S
+(integer) 0
+127.0.0.1:6379> sadd Apple_versions macOS macos_Sierra iOS4
+(integer) 0
+127.0.0.1:6379> sadd _Oppo_versions OPPO_Reno8 OPPO_A78 OPPO_F15
+(integer) 0
+127.0.0.1:6379> sadd _BlackBerry_versions BlackBerry_Z10 BlackBerry_O10 BlackBerry_Classic
+(integer) 0
+127.0.0.1:6379> sadd Samsung_Features 3D_Touch BSI_Sensor Bezel-less NFC_Support
+(integer) 0
+127.0.0.1:6379> sadd Apple_Features Sound_Recognition Mirror_Front_Camera  Back_Taps
+(integer) 0
+127.0.0.1:6379> sadd _Oppo_Features Triple_Rear_Camera Android_v12_OS Qualcomm_Snapdragon
+(integer) 0
+127.0.0.1:6379> sadd _BlackBerry_Features BlackBerry_Hub Picture_Password Data_Backup
+(integer) 3
+127.0.0.1:6379> smembers mobile_type
+1) "Oppo"
+2) "Apple"
+3) "Samsung"
+4) "BlackBerry"
+127.0.0.1:6379> smembers Samsung_versions
+1) "Galaxy_S"
+2) "Galaxy_A"
+3) "Samsung_Galaxy_M31s"
+127.0.0.1:6379> smembers Apple_versions
+1) "iOS4"
+2) "macOS"
+3) "macos_Sierra"
+127.0.0.1:6379> smembers _Oppo_versions
+1) "OPPO_Reno8"
+2) "OPPO_A78"
+3) "OPPO_F15"
+127.0.0.1:6379> smembers _BlackBerry_versions
+1) "BlackBerry_Classic"
+2) "BlackBerry_O10"
+3) "BlackBerry_Z10"
+127.0.0.1:6379> smembers Samsung_Features
+1) "3D_Touch,BSI_Sensor"
+2) "3D_Touch"
+3) "BSI_Sensor"
+4) "Bezel-less"
+5) "NFC_Support"
+127.0.0.1:6379> smembers Apple_Features
+1) "Back_Taps"
+2) "Mirror_Front_Camera"
+3) "Sound_Recognition"
+127.0.0.1:6379> smembers _Oppo_Features
+1) "Triple_Rear_Camera"
+2) "Qualcomm_Snapdragon"
+3) "Android_v12_OS"
+127.0.0.1:6379> smembers _BlackBerry_Features
+1) "Data_Backup"
+2) "Picture_Password"
+3) "BlackBerry_Hub"
+127.0.0.1:6379> save
+OK
+127.0.0.1:6379> keys *
+ 1) "_Oppo_Features"
+ 2) "Samsung_versions"
+ 3) "Apple_Features"
+ 4) "_BlackBerry_versions"
+ 5) "Samsung_features"
+ 6) "mobile_type"
+ 7) "_BlackBerry_Features"
+ 8) "Samsung_Features"
+ 9) "_Oppo_versions"
+10) "Apple_versions"
+127.0.0.1:6379>
